@@ -1,4 +1,4 @@
-# phrases_and_ips
+# phrases
 A simulated web platform featuring philosophical quotes.
 
 ## description

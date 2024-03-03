@@ -33,6 +33,7 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             opacity: 0;
+            cursor: pointer; /* Add cursor style to indicate it's clickable */
         }
     </style>
 </head>
@@ -82,6 +83,15 @@
                 })
                 .catch(error => console.error('Error fetching random phrase:', error));
         }
+
+        // Add hover animation using Anime.js
+        anime({
+            targets: '#random-phrase',
+            scale: [1, 1.1],
+            duration: 200,
+            easing: 'easeInOutQuad',
+            autoplay: false, // Don't start the animation automatically
+        });
 
         // Configure the particles.js library
         particlesJS('particles-js', {
@@ -178,6 +188,31 @@
             // Fetch and display a new phrase on every click
             fetchAndDisplayPhrase();
         });
+
+        // Add mouseover event listener to the phrase
+        document.getElementById('random-phrase').addEventListener('mouseover', function () {
+            // Start the hover animation
+            anime({
+                targets: '#random-phrase',
+                scale: 1.1,
+                duration: 200,
+                easing: 'easeInOutQuad',
+            });
+        });
+
+        // Add mouseout event listener to the phrase
+        document.getElementById('random-phrase').addEventListener('mouseout', function () {
+            // Reset the scale to its original size
+            anime({
+                targets: '#random-phrase',
+                scale: 1,
+                duration: 200,
+                easing: 'easeInOutQuad',
+            });
+        });
+
+        // Prevent changing cursor when hovering over the phrase
+        document.getElementById('random-phrase').style.cursor = 'default';
     </script>
 
 </body>

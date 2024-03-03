@@ -9,7 +9,7 @@ philosophical_phrases = [
         "author": "Buddha",
     },
     {
-        "phrase": "Life is really simple, but we insist on making it complicated.",
+        "phrase": "Life is really simpl  on making it complicated.",
         "author": "Confucius",
     },
     {"phrase": "The purpose of our lives is to be happy.", "author": "Dalai Lama"},
@@ -179,6 +179,238 @@ philosophical_phrases = [
     },
     {
         "phrase": "Be the change that you wish to see in the world.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only way to truly understand the world is to embrace its complexity.",
+        "author": "Unknown",
+    },
+    {"phrase": "The greatest wealth is the wealth of the heart.", "author": "Unknown"},
+    {
+        "phrase": "The only limit to our achievements is the one we set for ourselves.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The journey of a thousand miles begins with a single step.",
+        "author": "Lao Tzu",
+    },
+    {
+        "phrase": "The only thing necessary for the triumph of evil is for good men to do nothing.",
+        "author": "Edmund Burke",
+    },
+    {
+        "phrase": "The best way to predict the future is to create it.",
+        "author": "Peter Drucker",
+    },
+    {
+        "phrase": "The only thing we have to fear is fear itself.",
+        "author": "Franklin D. Roosevelt",
+    },
+    {
+        "phrase": "The only way to do great work is to love what you do.",
+        "author": "Steve Jobs",
+    },
+    {
+        "phrase": "The only thing that interferes with my learning is my education.",
+        "author": "Albert Einstein",
+    },
+    {
+        "phrase": "The only way to make sense out of change is to plunge into it, move with it, and join the dance.",
+        "author": "Alan Watts",
+    },
+    {
+        "phrase": "The only constant in life is change, and the only constant in change is the lack of change.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing necessary for the triumph of good is for evil men to do nothing.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The best way to find yourself is to lose yourself in the service of others.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only tyrant I accept in this world is the still voice within.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only thing necessary for evil to triumph is for good men to do nothing.",
+        "author": "Edmund Burke",
+    },
+    {
+        "phrase": "The only thing that counts is the will to do something. The rest is mere talk.",
+        "author": "Pablo Picasso",
+    },
+    {
+        "phrase": "The only thing that matters is the thing that matters to you.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to be happy is to embrace the present moment and let go of our fears and desires.",
+        "author": "Buddha",
+    },
+    {
+        "phrase": "The only thing we can control in life is our own thoughts and actions.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to make a good first impression is to start with a good last impression.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing that can defeat us is our own fears and doubts.",
+        "author": "Nelson Mandela",
+    },
+    {
+        "phrase": "The only thing that matters in life is the love we give and receive.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to be successful is to take action and never give up on your dreams.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to truly live is to embrace the present moment and let go of our fears and desires.",
+        "author": "Buddha",
+    },
+    {"phrase": "The only thing that sets us free is the truth.", "author": "Unknown"},
+    {
+        "phrase": "The only way to make sense out of life is to plunge into it, move with it, and join the dance.",
+        "author": "Alan Watts",
+    },
+    {
+        "phrase": "The only constant in life is change, and the only constant in change is the lack of change.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing necessary for the triumph of good is for evil men to do nothing.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The best way to find yourself is to lose yourself in the service of others.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only tyrant I accept in this world is the still voice within.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only thing necessary for evil to triumph is for good men to do nothing.",
+        "author": "Edmund Burke",
+    },
+    {
+        "phrase": "The only thing that counts is the will to do something. The rest is mere talk.",
+        "author": "Pablo Picasso",
+    },
+    {
+        "phrase": "The only thing that matters is the thing that matters to you.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to be happy is to embrace the present moment and let go of our fears and desires.",
+        "author": "Buddha",
+    },
+    {
+        "phrase": "The only thing we can control in life is our own thoughts and actions.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to make a good first impression is to start with a good last impression.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing that can defeat us is our own fears and doubts.",
+        "author": "Nelson Mandela",
+    },
+    {
+        "phrase": "The only thing that matters in life is the love we give and receive.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to be successful is to take action and never give up on your dreams.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to truly live is to embrace the present moment and let go of our fears and desires.",
+        "author": "Buddha",
+    },
+    {"phrase": "The only thing that sets us free is the truth.", "author": "Unknown"},
+    {
+        "phrase": "The only way to make sense out of life is to plunge into it, move with it, and join the dance.",
+        "author": "Alan Watts",
+    },
+    {
+        "phrase": "The only constant in life is change, and the only constant in change is the lack of change.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing necessary for the triumph of good is for evil men to do nothing.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The best way to find yourself is to lose yourself in the service of others.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only tyrant I accept in this world is the still voice within.",
+        "author": "Mahatma Gandhi",
+    },
+    {
+        "phrase": "The only thing necessary for evil to triumph is for good men to do nothing.",
+        "author": "Edmund Burke",
+    },
+    {
+        "phrase": "The only thing that counts is the will to do something. The rest is mere talk.",
+        "author": "Pablo Picasso",
+    },
+    {
+        "phrase": "The only thing that matters is the thing that matters to you.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to be happy is to embrace the present moment and let go of our fears and desires.",
+        "author": "Buddha",
+    },
+    {
+        "phrase": "The only thing we can control in life is our own thoughts and actions.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to make a good first impression is to start with a good last impression.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing that can defeat us is our own fears and doubts.",
+        "author": "Nelson Mandela",
+    },
+    {
+        "phrase": "The only thing that matters in life is the love we give and receive.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to be successful is to take action and never give up on your dreams.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only way to truly live is to embrace the present moment and let go of our fears and desires.",
+        "author": "Buddha",
+    },
+    {"phrase": "The only thing that sets us free is the truth.", "author": "Unknown"},
+    {
+        "phrase": "The only way to make sense out of life is to plunge into it, move with it, and join the dance.",
+        "author": "Alan Watts",
+    },
+    {
+        "phrase": "The only constant in life is change, and the only constant in change is the lack of change.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The only thing necessary for the triumph of good is for evil men to do nothing.",
+        "author": "Unknown",
+    },
+    {
+        "phrase": "The best way to find yourself is to lose yourself in the service of others.",
         "author": "Mahatma Gandhi",
     },
 ]

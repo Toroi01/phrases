@@ -29,12 +29,10 @@
 
         #text-container h1 {
             color: black;
-            /* Text color */
             font-size: 2em;
             margin: 0;
             font-family: 'Arial', sans-serif;
             opacity: 0;
-            /* Initially set opacity to 0 for the animation */
         }
     </style>
 </head>
@@ -46,7 +44,7 @@
 
     <!-- Create a container for the text -->
     <div id="text-container">
-        <h1 id="random-phrase" style="user-select: none;">Loading...</h1>
+        <h1 id="random-phrase" style="user-select: none;"></h1>
     </div>
 
     <!-- Include the particles.js library -->
@@ -56,26 +54,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <script>
+        // Function to fetch a new phrase and update the display
+        function fetchAndDisplayPhrase() {
+            fetch('/get_phrase')  // Assuming your Flask app is running on localhost:5000
+                .then(response => response.json())
+                .then(data => {
+                    const randomPhrase = data.phrase;
+                    const author = data.author;
+
+                    // Animate the random phrase with fade-in and fade-out effect
+                    anime({
+                        targets: '#random-phrase',
+                        opacity: [1, 0], // Fade-out
+                        easing: 'easeInOutQuad',
+                        duration: 500,
+                        complete: function () {
+                            // Set the new phrase and trigger fade-in
+                            document.getElementById('random-phrase').innerHTML = `"${randomPhrase}"<br>- ${author}`;
+                            anime({
+                                targets: '#random-phrase',
+                                opacity: [0, 1], // Fade-in
+                                easing: 'easeInOutQuad',
+                                duration: 500,
+                            });
+                        }
+                    });
+                })
+                .catch(error => console.error('Error fetching random phrase:', error));
+        }
+
         // Configure the particles.js library
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 200, // Adjust the number of particles
+                    value: 200,
                     density: {
                         enable: true,
                         value_area: 800
                     }
                 },
                 color: {
-                    value: '#000000' // Particle color (black)
+                    value: '#000000'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
                 },
                 size: {
-                    value: 3
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
                 },
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: '#000000', // Line color (black)
+                    color: '#000000',
                     opacity: 0.4,
                     width: 1
                 },
@@ -105,31 +159,25 @@
                         enable: true,
                         mode: 'push'
                     }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    }
                 }
             },
             retina_detect: true
         });
 
-        fetch('/get_phrase')  // Assuming your Flask app is running on localhost:5000
-            .then(response => response.json())
-            .then(data => {
-                const randomPhrase = data.phrase;
-                const author = data.author;
+        // Initial fetch and display
+        fetchAndDisplayPhrase();
 
-                // Animate the random phrase address with Anime.js
-                anime({
-                    targets: '#random-phrase',
-                    translateY: [-50, 0], // Move the text up from -50px to 0px
-                    opacity: [0, 1], // Fade in the text from 0 to 1
-                    easing: 'easeInOutQuad',
-                    duration: 1500,
-                    delay: 500, // Delay the animation by 500ms after particles.js initialization
-                    complete: function () {
-                        document.getElementById('random-phrase').innerHTML = `"${randomPhrase}"<br>- ${author}`;
-                    }
-                });
-            })
-            .catch(error => console.error('Error fetching random phrase:', error));
+        // Add click event listener to the document
+        document.addEventListener('click', function () {
+            // Fetch and display a new phrase on every click
+            fetchAndDisplayPhrase();
+        });
     </script>
 
 </body>

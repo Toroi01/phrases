@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,110 +32,105 @@
             font-size: 2em;
             margin: 0;
             font-family: 'Arial', sans-serif;
-            opacity: 0; /* Initially set opacity to 0 for the animation */
+            opacity: 0;
+            /* Initially set opacity to 0 for the animation */
         }
     </style>
 </head>
+
 <body>
 
-<!-- Create a container for the particle animation -->
-<div id="particles-js"></div>
+    <!-- Create a container for the particle animation -->
+    <div id="particles-js"></div>
 
-<!-- Create a container for the text -->
-<div id="text-container">
-    <h1 id="random-phrase">Loading...</h1>
-</div>
+    <!-- Create a container for the text -->
+    <div id="text-container">
+        <h1 id="random-phrase">Loading...</h1>
+    </div>
 
-<!-- Include the particles.js library -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Include the particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<!-- Include the Anime.js library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Include the Anime.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-<script>
-    // Configure the particles.js library
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 200, // Adjust the number of particles
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: '#ffffff'
-            },
-            size: {
-                value: 3
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#ffffff',
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 5,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                }
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'repulse'
+    <script>
+        // Configure the particles.js library
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 200, // Adjust the number of particles
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
                 },
-                onclick: {
+                color: {
+                    value: '#ffffff'
+                },
+                size: {
+                    value: 3
+                },
+                line_linked: {
                     enable: true,
-                    mode: 'push'
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 5,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
                 }
-            }
-        },
-        retina_detect: true
-    });
-
-    // Fetch the public IP using Flask endpoint and display it with Anime.js
-    fetch('/get_ip')  // Assuming your Flask app is running on localhost:5000
-        .then(response => response.json())
-        .then(data => {
-            const userIP = data.ip;
-        })
-        .catch(error => console.error('Error fetching IP:', error));
-
-    fetch('/get_phrase')  // Assuming your Flask app is running on localhost:5000
-        .then(response => response.json())
-        .then(data => {
-            const randomPhrase = data.phrase;
-            const author = data.author;
-
-            // Animate the random phrase address with Anime.js
-            anime({
-                targets: '#random-phrase',
-                translateY: [-50, 0], // Move the text up from -50px to 0px
-                opacity: [0, 1], // Fade in the text from 0 to 1
-                easing: 'easeInOutQuad',
-                duration: 1500,
-                delay: 500, // Delay the animation by 500ms after particles.js initialization
-                complete: function() {
-                    document.getElementById('random-phrase').innerHTML = `"${randomPhrase}"<br>- ${author}`;
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    }
                 }
-            });
-        })
-        .catch(error => console.error('Error fetching random phrase:', error));
-</script>
+            },
+            retina_detect: true
+        });
+
+        fetch('/get_phrase')  // Assuming your Flask app is running on localhost:5000
+            .then(response => response.json())
+            .then(data => {
+                const randomPhrase = data.phrase;
+                const author = data.author;
+
+                // Animate the random phrase address with Anime.js
+                anime({
+                    targets: '#random-phrase',
+                    translateY: [-50, 0], // Move the text up from -50px to 0px
+                    opacity: [0, 1], // Fade in the text from 0 to 1
+                    easing: 'easeInOutQuad',
+                    duration: 1500,
+                    delay: 500, // Delay the animation by 500ms after particles.js initialization
+                    complete: function () {
+                        document.getElementById('random-phrase').innerHTML = `"${randomPhrase}"<br>- ${author}`;
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching random phrase:', error));
+    </script>
 
 </body>
+
 </html>

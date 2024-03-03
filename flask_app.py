@@ -1,21 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 import random
+from philosophical_phrases import philosophical_phrases
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
-philosophical_phrases = [
-    {"phrase": "The only true wisdom is in knowing you know nothing.", "author": "Socrates"},
-    {"phrase": "He who is not a good servant will not be a good master.", "author": "Plato"},
-    {"phrase": "What you get by achieving your goals is not as important as what you become by achieving your goals.", "author": "Zig Ziglar"},
-    {"phrase": "The more I learn, the more I realize how much I don't know.", "author": "Albert Einstein"},
-    {"phrase": "Know thyself.", "author": "Socrates"},
-    {"phrase": "The unexamined life is not worth living.", "author": "Socrates"},
-    {"phrase": "Happiness is not something ready-made. It comes from your own actions.", "author": "Dalai Lama"},
-]
 
 @app.route('/get_phrase')
 def get_phrase():

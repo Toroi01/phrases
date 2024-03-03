@@ -1,4 +1,7 @@
 # phrases_and_ips
-Dummy web platform for displaying philosophical quotes with optional IP logging functionality.
-# description
-Randomly showcases philosophical quotes on each website visit, along with optional IP registration in user_ips.txt
+A simulated web platform featuring philosophical quotes, allowing for optional IP logging functionality.
+
+## description
+Randomly presents philosophical quotes upon each website visit, with the option to register IPs recorded in user_ips.txt.
+
+**Web:** [toroi.pythonanywhere.com](https://toroi.pythonanywhere.com)

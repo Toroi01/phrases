@@ -1,7 +1,6 @@
-import datetime
 import random
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template
 
 from philosophical_phrases import philosophical_phrases
 
